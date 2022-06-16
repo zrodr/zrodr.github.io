@@ -81,7 +81,6 @@ body {
 }
 
 
-
 /* Page Styles */
 
 /* 
@@ -318,12 +317,6 @@ iframe {
   header>ul {
     gap: 0.1rem;
   }
-
-  header>ul li {}
-
-  /* header .link {
-    margin: 0 0.2rem;
-  } */
 
   .title {
     font-size: 1.2rem;
