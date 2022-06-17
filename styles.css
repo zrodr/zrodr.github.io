@@ -29,7 +29,7 @@ body {
   min-height: 100vh;
   color: #fff;
 
-  background-color: var(--color-primary);
+  background-color: #000;
   background-image: linear-gradient(235deg, var(--color-primary) 0%, #000000 64%)
 }
 
@@ -119,7 +119,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   padding: 1.75rem 1rem;
   background-color: var(--transparent-panel);
   border-radius: 0px 0px 20px 20px;
@@ -167,9 +167,8 @@ header>ul li:first-of-type {
 }
 
 .terminal-border {
-  width: max(25%, 300px);
-  aspect-ratio: 1;
-
+  width: max(20vw, 300px);
+  height: max(20vw, 300px);
   background-color: var(--transparent-panel);
   border: 2px solid #000;
   border-radius: 50%;
@@ -326,7 +325,7 @@ header>ul li:first-of-type {
 .featured-project p {
   text-align: left;
   justify-self: center;
-  width: 60%;
+  width: 70%;
 }
 
 iframe {
@@ -394,7 +393,7 @@ iframe {
   .featured-project {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1fr;
-    row-gap: 2rem;
+    row-gap: 0.5rem;
   }
 }
 
