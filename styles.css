@@ -38,9 +38,7 @@ html {
   border-radius: 3px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  box-shadow: 0 0 10px var(--color-secondary);
-}
+
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -67,11 +65,6 @@ p {
   color: white
 }
 
-.icon:hover {
-  transform: translateY(-6px);
-  transition: transform 0.5s;
-}
-
 .link {
   padding: .75rem;
   text-transform: uppercase;
@@ -89,12 +82,6 @@ p {
   transition: background-size 300ms, text-shadow 300ms;
 }
 
-.link:hover {
-  text-shadow: 0 0 5px var(--color-secondary);
-  background-size: 100% 100%;
-  background-position-x: left;
-}
-
 .btn-link {
   letter-spacing: 1px;
   font-weight: 500;
@@ -105,23 +92,10 @@ p {
   padding: 0.750rem
 }
 
-.btn-link:hover {
-  transform: translateY(-3px);
-  color: var(--color-accent);
-  border: 2px solid var(--color-accent);
-  background-color: #fff;
-  transition: transform 0.3s, color 0.3s, background-color 0.3s, border 0.3s
-}
-
 .glow-heading {
   font-weight: 400;
   text-shadow: 0 0 10px var(--color-secondary);
   transition: text-shadow 0.5s;
-}
-
-.glow-heading:hover {
-  text-shadow: 0 3px 20px var(--color-secondary);
-  cursor: default;
 }
 
 section .glow-heading {
@@ -303,7 +277,7 @@ header>ul li:first-of-type {
 
 .project-card {
   width: 375px;
-  min-width: 320px;
+  min-width: 350px;
   height: auto;
   padding: 0.5rem 0;
   background-color: var(--transparent-panel-light);
@@ -435,6 +409,38 @@ iframe {
  * Media Queries 
  */
 
+/* for devices that support hovering (i.e. non touch-screens)*/
+@media (hover:hover) {
+  .link:hover {
+    text-shadow: 0 0 5px var(--color-secondary);
+    background-size: 100% 100%;
+    background-position-x: left;
+  }
+
+  .icon:hover {
+    transform: translateY(-6px);
+    transition: transform 0.5s;
+  }
+
+  .btn-link:hover {
+    transform: translateY(-3px);
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    background-color: #fff;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s, border 0.3s
+  }
+
+  .glow-heading:hover {
+    text-shadow: 0 3px 20px var(--color-secondary);
+    cursor: default;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 0 10px var(--color-secondary);
+  }  
+}
+
+
 /* tablet screens and split-window display */
 @media screen and (max-width: 850px) {
   .featured-project {
@@ -485,12 +491,8 @@ iframe {
     font-size: 1.2rem;
   }
 
-  #project-carousel div:first-child {
-    margin-left: 1.25rem;
-  }
-  #project-carousel div:last-child {
-    margin-right: 1.25rem;
-  }
+  #project-carousel>div:first-child { margin-left: 0.2rem; }
+  #project-carousel>div:last-child { margin-right: 0.2rem; }
 
   ::-webkit-scrollbar {
     background-color: var(--transparent-panel);
@@ -501,6 +503,10 @@ iframe {
   ::-webkit-scrollbar-thumb {
     background-color: var(--color-secondary);
     border-radius: 2px;
+  }
+
+  .featured-project p {
+    width: 90%;
   }
 }
 

@@ -16,7 +16,7 @@ const main = () => {
     // snap to the left/right card depending on the current arrow direction
     scrollArrow.addEventListener('click', (event) => {
       const currentScrollVal = carousel.scrollLeft;
-      let snapValue = (carousel.scrollWidth / carousel.childElementCount) + 10;
+      let snapValue = (carousel.scrollWidth / carousel.childElementCount) + 15;
   
       // handles movement from end -> start
       if (scrollArrow.classList.contains('end')) 
