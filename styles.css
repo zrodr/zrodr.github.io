@@ -409,13 +409,6 @@ iframe {
  * Media Queries 
  */
 
-/* Handles operating system scale affecting sizing */ 
-@media (-webkit-device-pixel-ratio: 1.25) {
-  * {
-    zoom: 0.8;
-  }
-}
-
 /* for devices that support hovering (i.e. non touch-screens)*/
 @media (hover:hover) {
   .link:hover {
