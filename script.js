@@ -2,6 +2,9 @@ const carousel = document.getElementById('project-carousel');
 const scrollArrow = document.querySelector('.scroll-arrow');
 
 const main = () => {
+  document.querySelector("meta[name=viewport]")
+    .setAttribute('content', 'width=device-width, initial-scale='+(1/window.devicePixelRatio));
+
   if (carousel && scrollArrow) {
     // detect if the scrollbar is currently in the left-most or right-most position
     carousel.addEventListener('scroll', (event) => {
