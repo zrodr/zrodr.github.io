@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
 
 :root {
-  --color-primary: #6a2b83;
+  --color-primary: #2d2d2d;
+  --color-dark: #rgba(34, 34, 34, 0.9);
   --color-secondary: #14beb1;
   --color-accent: #3e54ab;
   --transparent-panel: rgba(12, 12, 12, 50%);
@@ -17,36 +18,22 @@
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  scrollbar-width: auto;
-  scrollbar-color: var(--color-secondary) var(--transparent-panel);
 }
-
-::-webkit-scrollbar {
-  background-color: var(--transparent-panel);
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-secondary);
-  border-radius: 3px;
-}
-
-
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   color: #fff;
+  margin: 0 auto;
+  text-align: center;
 
-  background-color: #000;
-  background-image: linear-gradient(235deg, var(--color-primary) 0%, #000000 64%)
+  background-color: var(--color-primary);
 }
 
 p {
@@ -54,26 +41,22 @@ p {
   line-height: 1.4;
 }
 
-.container {
-  width: 85%;
-  margin: 0 auto;
-  text-align: center
-}
-
 .icon {
   padding: 1rem;
-  color: white
+  color: white;
 }
 
 .link {
-  padding: .75rem;
+  padding: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  background-image: linear-gradient(transparent 0%,
-      transparent 90%,
-      var(--color-secondary) 90%,
-      var(--color-secondary) 100%);
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent 90%,
+    var(--color-secondary) 90%,
+    var(--color-secondary) 100%
+  );
 
   background-repeat: no-repeat;
   background-size: 0% 100%;
@@ -83,13 +66,14 @@ p {
 }
 
 .btn-link {
+  text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
   cursor: pointer;
   color: #fff;
   border: 2px solid #fff;
-  border-radius: 20px;
-  padding: 0.750rem
+  border-radius: 15px;
+  padding: 0.75rem;
 }
 
 .glow-heading {
@@ -113,32 +97,39 @@ section .glow-heading {
  * Header 
  */
 header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.75rem 1rem;
+  padding: 1rem 1rem;
   background-color: var(--transparent-panel);
   border-radius: 0px 0px 20px 20px;
 }
 
 li {
-  list-style-type: none
+  list-style-type: none;
 }
 
 a {
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
 
-header>ul {
+header > ul {
   justify-content: flex-end;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
 }
 
-header>ul li:first-of-type {
+header > ul li:first-of-type {
   margin-right: auto;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--color-secondary);
 }
 
 /* 
@@ -183,7 +174,6 @@ header>ul li:first-of-type {
 
   100% {
     border-color: var(--color-secondary);
-    ;
   }
 }
 
@@ -200,32 +190,29 @@ header>ul li:first-of-type {
 
 .typing-text {
   overflow: hidden;
-  border-right: .15em solid #fff;
+  border-right: 0.15em solid #fff;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .15em;
-  animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 
   to {
-    width: 100%
+    width: 100%;
   }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-
   from,
   to {
-    border-color: transparent
+    border-color: transparent;
   }
 
   50% {
@@ -238,18 +225,18 @@ header>ul li:first-of-type {
   padding: 1rem;
 }
 
-.about>h2 {
+.about > h2 {
   padding-bottom: 0.5rem;
 }
 
-.about>p {
+.about > p {
   text-indent: 3ch;
   padding: 1rem 0.25rem;
   max-width: 70ch;
 }
 
-.about>p>strong,
-.featured-project>p>strong {
+.about > p > strong,
+.featured-project > p > strong {
   text-shadow: 0 0 7px var(--color-secondary);
 }
 
@@ -267,8 +254,7 @@ header>ul li:first-of-type {
   justify-content: flex-start;
   gap: 4rem;
   overflow-x: scroll;
-  scrollbar-width: auto;
-  scrollbar-color: var(--color-secondary) var(--transparent-panel);
+  scrollbar-width: none;
 }
 
 .scroll-arrow {
@@ -363,15 +349,15 @@ iframe {
 }
 
 #contact i[class~="fa-github"] {
-  animation: green-icon-glow 1.0s ease-in-out infinite alternate;
+  animation: green-icon-glow 1s ease-in-out infinite alternate;
 }
 
 #contact i[class~="fa-linkedin"] {
-  animation: blue-icon-glow 1.0s ease-in-out infinite alternate;
+  animation: blue-icon-glow 1s ease-in-out infinite alternate;
 }
 
 #contact i[class~="fa-envelope"] {
-  animation: purple-icon-glow 1.0s ease-in-out infinite alternate;
+  animation: purple-icon-glow 1s ease-in-out infinite alternate;
 }
 
 @keyframes green-icon-glow {
@@ -396,7 +382,8 @@ iframe {
 
 @keyframes purple-icon-glow {
   0% {
-    text-shadow: 0 0 10px #ff1177, 0 0 20px #d6249f, 0 0 30px var(--color-accent);
+    text-shadow: 0 0 10px #ff1177, 0 0 20px #d6249f,
+      0 0 30px var(--color-accent);
   }
 
   100% {
@@ -404,13 +391,12 @@ iframe {
   }
 }
 
-
 /* 
  * Media Queries 
  */
 
 /* for devices that support hovering (i.e. non touch-screens)*/
-@media (hover:hover) {
+@media (hover: hover) {
   .link:hover {
     text-shadow: 0 0 5px var(--color-secondary);
     background-size: 100% 100%;
@@ -427,19 +413,14 @@ iframe {
     color: var(--color-accent);
     border: 2px solid var(--color-accent);
     background-color: #fff;
-    transition: transform 0.3s, color 0.3s, background-color 0.3s, border 0.3s
+    transition: transform 0.3s, color 0.3s, background-color 0.3s, border 0.3s;
   }
 
   .glow-heading:hover {
     text-shadow: 0 3px 20px var(--color-secondary);
     cursor: default;
   }
-
-  ::-webkit-scrollbar-thumb:hover {
-    box-shadow: 0 0 10px var(--color-secondary);
-  }  
 }
-
 
 /* tablet screens and split-window display */
 @media screen and (max-width: 850px) {
@@ -448,7 +429,6 @@ iframe {
     grid-template-rows: 0.5fr 1fr;
     row-gap: 0.5rem;
   }
-
 
   .scroll-arrow {
     display: block;
@@ -475,15 +455,11 @@ iframe {
 
 /* phone screen layout changes */
 @media screen and (max-width: 450px) {
-  .container {
-    width: 95%;
-  }
-
-  header>ul {
+  header > ul {
     gap: 0;
   }
 
-  header>ul li:first-of-type {
+  header > ul li:first-of-type {
     display: none;
   }
 
@@ -491,18 +467,11 @@ iframe {
     font-size: 1.2rem;
   }
 
-  #project-carousel>div:first-child { margin-left: 0.2rem; }
-  #project-carousel>div:last-child { margin-right: 0.2rem; }
-
-  ::-webkit-scrollbar {
-    background-color: var(--transparent-panel);
-    width: 3px;
-    height: 3px;
+  #project-carousel > div:first-child {
+    margin-left: 0.2rem;
   }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--color-secondary);
-    border-radius: 2px;
+  #project-carousel > div:last-child {
+    margin-right: 0.2rem;
   }
 
   .featured-project p {
@@ -515,15 +484,15 @@ iframe {
  */
 
 .flex {
-  display: flex
+  display: flex;
 }
 
 .f-col {
-  flex-direction: column
+  flex-direction: column;
 }
 
 .f-row {
-  flex-direction: row
+  flex-direction: row;
 }
 
 .f-centered {

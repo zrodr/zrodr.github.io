@@ -1,164 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/94053461ce.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="https://kit.fontawesome.com/94053461ce.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/rocket-solid.svg" sizes="16x16" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
 
-  <link rel="icon" href="img/rocket-solid.svg" sizes="16x16">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+    <title>Web Dev | Game Dev | Izaiah Rodriguez</title>
+  </head>
 
-  <title>Zay Rodriguez - Software Developer</title>
-</head>
+  <body>
+    <header>
+      <ul class="flex f-row">
+        <li>
+          <img src="img/cartoon.PNG" alt="Cartoon-ized me" />
+        </li>
+        <li><a class="link" href="#portfolio">Projects</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+        <li><a class="btn-link" href="#">Resume</a></li>
+      </ul>
+    </header>
 
-<body class="container">
+    <section id="title-card">
+      <div class="terminal-border flex f-centered">
+        <svg
+          id="terminal-prompt"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"
+        >
+          <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            d="M9.372 86.63C-3.124 74.13-3.124 53.87 9.372 41.37C21.87 28.88 42.13 28.88 54.63 41.37L246.6 233.4C259.1 245.9 259.1 266.1 246.6 278.6L54.63 470.6C42.13 483.1 21.87 483.1 9.372 470.6C-3.124 458.1-3.124 437.9 9.372 425.4L178.7 256L9.372 86.63zM544 416C561.7 416 576 430.3 576 448C576 465.7 561.7 480 544 480H256C238.3 480 224 465.7 224 448C224 430.3 238.3 416 256 416H544z"
+          />
+        </svg>
+      </div>
+      <div class="title">
+        <p class="typing-text">Web Dev | SWE | Game Dev</p>
+      </div>
 
-  <header>
-    <ul class="flex f-row">
-      <li>
-        <h2 class="glow-heading">R.Izaiah Rodriguez</h2>
-      </li>
-      <li><a class="link" href="#portfolio">Projects</a></li>
-      <li><a class="link" href="#contact">Contact</a></li>
-    </ul>
-  </header>
+      <div class="about">
+        <h3>Welcome all! I'm Izaiah, full-stack developer.</h3>
+        <p>
+          <strong
+            >It all started with a pipe dream & an undying passion for
+            gaming;</strong
+          >
+          Going down the CS rabbit hole to achieve it enveloped me in the realm
+          of 1's & 0's, starting my journey from lowly, humble zero to technical
+          hero. I'm a recent CS graduate from San Francisco State,
+          game/novel/film enthusiast, & self-proclaimed creative (among
+          <em>many</em> other things.) Insatiably curious & unwavering in the
+          face of challenge, my goal is to seamlessly integrate the technical &
+          creative through my work.
+        </p>
+      </div>
+    </section>
 
-  <section id="title-card">
-    <div class="terminal-border flex f-centered">
-      <svg id="terminal-prompt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-        <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-        <path
-          d="M9.372 86.63C-3.124 74.13-3.124 53.87 9.372 41.37C21.87 28.88 42.13 28.88 54.63 41.37L246.6 233.4C259.1 245.9 259.1 266.1 246.6 278.6L54.63 470.6C42.13 483.1 21.87 483.1 9.372 470.6C-3.124 458.1-3.124 437.9 9.372 425.4L178.7 256L9.372 86.63zM544 416C561.7 416 576 430.3 576 448C576 465.7 561.7 480 544 480H256C238.3 480 224 465.7 224 448C224 430.3 238.3 416 256 416H544z" />
-      </svg>
-    </div>
-    <div class="title">
-      <p class="typing-text">Web Dev | SWE | Game Dev</p>
-    </div>
+    <section id="portfolio">
+      <h1 class="glow-heading">Projects</h1>
 
-    <div class="about">
-      <h3>Welcome all! I'm Izaiah, full-stack developer.</h3>
+      <div class="scroll-arrow start">
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"
+          />
+        </svg>
+      </div>
+
+      <div id="project-carousel" class="flex f-row">
+        <div class="project-card flex f-col">
+          <h2 class="card-title">Containment</h2>
+          <ul class="tech-stack flex f-row">
+            <li>Unity</li>
+            <li>C#</li>
+            <li>Unity+Mirror</li>
+          </ul>
+
+          <img
+            class="project-photo"
+            src="img/containment-showcase.png"
+            alt="This is a screenshot of a project"
+          />
+
+          <p class="card-description">
+            Sci-fi/horror co-op shooter game. Work together, build defenses, &
+            mow down hordes of enemies to survive!
+          </p>
+          <a
+            class="btn-link"
+            href="https://github.com/benjaminkao/CSC631-831-Team1-TermProject"
+            >View code</a
+          >
+        </div>
+
+        <div class="project-card flex f-col">
+          <h2 class="card-title">RoomMe</h2>
+          <ul class="tech-stack flex f-row">
+            <li>Express</li>
+            <li>MySQL</li>
+            <li>Handlebars</li>
+            <li>CSS</li>
+            <li>JS</li>
+          </ul>
+
+          <img
+            class="project-photo"
+            src="img/roomme-showcase.PNG"
+            alt="This is a screenshot of a project"
+          />
+          <p class="card-description">
+            Real estate web application. Browse our selection of listings, or
+            create an account to manage your own.
+          </p>
+          <a class="btn-link" href="https://github.com/zrodr/roomme-webapp"
+            >View code</a
+          >
+        </div>
+
+        <div class="project-card flex f-col">
+          <h2 class="card-title">The Sugar House</h2>
+
+          <ul class="tech-stack flex f-row">
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>Handlebars</li>
+            <li>CSS</li>
+            <li>JS</li>
+          </ul>
+
+          <img
+            class="project-photo"
+            src="img/tsh-showcase.png"
+            alt="This is a screenshot of a project"
+          />
+          <p class="card-description">
+            Menu & contact site for a home bakery. Lightweight & personalized,
+            perfectly fitting for the business.
+          </p>
+          <a class="btn-link" href="https://github.com/zrodr/the-sugar-house"
+            >View code</a
+          >
+        </div>
+
+        <div class="project-card flex f-col">
+          <h2 class="card-title">LambdaVibe</h2>
+          <ul class="tech-stack flex f-row">
+            <li>Node.js</li>
+            <li>Sqlite</li>
+            <li>React</li>
+            <li>TachyonsCSS</li>
+          </ul>
+
+          <img
+            class="project-photo"
+            src="img/lambdavibe-showcase.png"
+            alt="This is a screenshot of a project"
+          />
+          <p class="card-description">
+            Music instrument & visualizer web application. Play songs (or a
+            single instrument) directly in your browser!
+          </p>
+          <a class="btn-link" href="https://github.com/zrodr/lambdavibe-reactjs"
+            >View code</a
+          >
+        </div>
+      </div>
+
+      <h1 class="glow-heading">Featured</h1>
+      <div class="featured-project">
+        <p>
+          <strong>Containment</strong> won 'best game' in a friendly class
+          competition for SFSU's Multiplayer Game Development course. Among the
+          guest judges were several industry professionals & SF State's CS
+          department chair! The development team is <em>extremely</em> proud of
+          what we accomplished together within the scope of this class. Feast
+          your eyes on the horrors in the lab:
+        </p>
+
+        <iframe
+          src="https://www.youtube.com/embed/-EPzXnh8YEQ"
+          title="Containment Trailer"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1 class="glow-heading">My links</h1>
+      <div><img src="img/cartoon.PNG" alt="Cartoon-ized me" /></div>
+
       <p>
-        <strong>It all started with a pipe dream & an undying passion for gaming;</strong>
-        Going down the CS rabbit hole to achieve it enveloped me in the realm of 1's & 0's, starting my journey from
-        lowly, humble zero to technical hero. I'm a recent CS graduate from San Francisco State, game/novel/film
-        enthusiast, & self-proclaimed creative (among <em>many</em> other things.) Insatiably curious & unwavering in
-        the face of challenge, my goal is to seamlessly integrate the technical & creative through my work.
+        If you've come this far, maybe you're willing to go a bit further! View
+        additional projects on my GitHub, or get in touch with me directly via
+        email/LinkedIn. Let's connect, & we'll build something great together.
       </p>
-    </div>
-  </section>
 
-  <section id="portfolio">
-    <h1 class="glow-heading">Projects</h1>
-
-    <div class="scroll-arrow start">
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"/></svg>
-    </div>
-
-    <div id="project-carousel" class="flex f-row">
-      <div class="project-card flex f-col">
-        <h2 class="card-title">Containment</h2>
-        <ul class="tech-stack flex f-row">
-          <li>Unity</li>
-          <li>C#</li>
-          <li>Unity+Mirror</li>
-        </ul>
-
-        <img class="project-photo" src="img/containment-showcase.png" alt="This is a screenshot of a project">
-
-        <p class="card-description">
-          Sci-fi/horror co-op shooter game. Work together, build defenses, & mow down hordes of enemies to survive!
-        </p>
-        <a class="btn-link" href="https://github.com/benjaminkao/CSC631-831-Team1-TermProject">View code</a>
-      </div>
-
-      <div class="project-card flex f-col">
-        <h2 class="card-title">RoomMe</h2>
-        <ul class="tech-stack flex f-row">
-          <li>Express</li>
-          <li>MySQL</li>
-          <li>Handlebars</li>
-          <li>CSS</li>
-          <li>JS</li>
-        </ul>
-
-        <img class="project-photo" src="img/roomme-showcase.PNG" alt="This is a screenshot of a project">
-        <p class="card-description">
-          Real estate web application. Browse our selection of listings, or create an account to manage your own.
-        </p>
-        <a class="btn-link" href="https://github.com/zrodr/roomme-webapp">View code</a>
-      </div>
-
-      <div class="project-card flex f-col">
-        <h2 class="card-title">The Sugar House</h2>
-
-        <ul class="tech-stack flex f-row">
-          <li>Express</li>
-          <li>MongoDB</li>
-          <li>Handlebars</li>
-          <li>CSS</li>
-          <li>JS</li>
-        </ul>
-
-        <img class="project-photo" src="img/tsh-showcase.png" alt="This is a screenshot of a project">
-        <p class="card-description">
-          Menu & contact site for a home bakery. Lightweight & personalized, perfectly fitting for the business.
-        </p>
-        <a class="btn-link" href="https://github.com/zrodr/the-sugar-house">View code</a>
-      </div>
-
-      <div class="project-card flex f-col">
-        <h2 class="card-title">LambdaVibe</h2>
-        <ul class="tech-stack flex f-row">
-          <li>Node.js</li>
-          <li>Sqlite</li>
-          <li>React</li>
-          <li>TachyonsCSS</li>
-        </ul>
-
-        <img class="project-photo" src="img/lambdavibe-showcase.png" alt="This is a screenshot of a project">
-        <p class="card-description">
-          Music instrument & visualizer web application. Play songs (or a single instrument) directly in your browser!
-        </p>
-        <a class="btn-link" href="https://github.com/zrodr/lambdavibe-reactjs">View code</a>
-      </div>
-    </div>
-
-    
-    <h1 class="glow-heading">Featured</h1>
-    <div class="featured-project">
-      <p><strong>Containment</strong> won 'best game' in a friendly class competition for SFSU's
-        Multiplayer Game Development course. Among the guest judges were several industry professionals & SF State's CS
-        department chair! The development team is <em>extremely</em> proud of what we
-        accomplished together within the scope of this class. Feast your eyes on the horrors in the lab:</p>
-
-      <iframe src="https://www.youtube.com/embed/-EPzXnh8YEQ" title="Containment Trailer" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h1 class="glow-heading">My links</h1>
-    <div><img src="img/cartoon.PNG" alt="Cartoon-ized me"></div>
-
-    <p>If you've come this far, maybe you're willing to go a bit further! View additional projects on my GitHub, or get in touch with me directly via email/LinkedIn. Let's connect, & we'll build something great together.</p>
-
-    <a href="https://github.com/zrodr">
-      <i class="fab fa-github fa-3x icon"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/izaiah-rodriguez-6b688421a/">
-      <i class="fab fa-linkedin fa-3x icon"></i>
-    </a>
-    <a href="mailto:zrodr@protonmail.com">
-      <i class="fa fa-envelope fa-3x icon" aria-hidden="true"></i>
-    </a>
-  </section>
-
-</body>
-
+      <a href="https://github.com/zrodr">
+        <i class="fab fa-github fa-3x icon"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/izaiah-rodriguez-6b688421a/">
+        <i class="fab fa-linkedin fa-3x icon"></i>
+      </a>
+      <a href="mailto:zrodr@protonmail.com">
+        <i class="fa fa-envelope fa-3x icon" aria-hidden="true"></i>
+      </a>
+    </section>
+  </body>
 </html>
