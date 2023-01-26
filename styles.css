@@ -111,13 +111,10 @@ section .glow-heading {
  * Header 
  */
 header {
-  /* position: sticky;
-  top: 0;
-  left: 0; */
   width: 100%;
   padding: 1rem 1rem;
-  background-color: var(--transparent-panel);
-  border-radius: 0px 0px 20px 20px;
+  border-bottom: 2px solid var(--color-secondary);
+  border-radius: 0px 0px 15px 15px;
 }
 
 header > ul {
@@ -143,12 +140,10 @@ header img {
 
 #title-card {
   margin: var(--section-margin);
-  min-height: calc(90vh);
+  min-height: calc(90vh + 50px);
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: minmax(320px, 1fr) 80px 0.5fr;
-  grid-template-columns: 1fr; */
   align-items: center;
 }
 
@@ -536,10 +531,7 @@ textarea:focus {
   #title-card {
     grid-template-rows: 75% 25%;
     grid-template-columns: 1fr;
-  }
-
-  #title-card > div:first-child {
-    align-self: end !important;
+    row-gap: 1rem;
   }
 
   #title-card > div {
