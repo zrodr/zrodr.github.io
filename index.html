@@ -25,7 +25,15 @@
         </li>
         <li><a class="link" href="#portfolio">Projects</a></li>
         <li><a class="link" href="#contact">Contact</a></li>
-        <li><a class="btn-link" href="#">Resume</a></li>
+        <li>
+          <a
+            class="btn-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.google.com/document/d/1xwmJr5cOoA3xF0Si0ongxwvhbpDX_nqG5eqAgUOxgik/edit?usp=sharing"
+            >Resume</a
+          >
+        </li>
       </ul>
     </header>
 
@@ -44,16 +52,17 @@
           </svg>
         </div>
         <div class="title">
-          <p class="typing-text">Web Dev. Game Dev. SWE.</p>
+          <p class="typing-text">Web Dev | Game Design</p>
         </div>
       </div>
       <div class="about">
         <h3 class="title">Hello, Izaiah here.</h3>
         <p>
-          I'm a software developer, enthusiast of all forms of media, &
-          self-proclaimed creative (among many other things.) Insatiably curious
-          & unwavering in the face of challenge, I aim to seamlessly integrate
-          the technical & creative through my work.
+          I'm a <strong>software developer</strong>,
+          <strong>media buff</strong>, & self-proclaimed
+          <strong>creative</strong> (among <em>many</em> other things.)
+          Insatiably curious & unwavering in the face of challenge, I aim to
+          seamlessly integrate the technical & creative through my work.
         </p>
       </div>
     </section>
@@ -75,6 +84,25 @@
       </div>
 
       <div id="project-carousel" class="flex f-row">
+        <div class="project-card flex f-col">
+          <h2 class="card-title">Antz Custom Helmets</h2>
+          <ul class="tech-stack flex f-row">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+          </ul>
+
+          <img
+            class="project-photo"
+            src="img/helmets-showcase.png"
+            alt="This is a screenshot of a project"
+          />
+
+          <p class="card-description">
+            Product showcase site for sports memorabilia collector/merchant.
+          </p>
+          <a class="btn-link" href="https://antboyzzz-helmets.com">View site</a>
+        </div>
         <div class="project-card flex f-col">
           <h2 class="card-title">Containment</h2>
           <ul class="tech-stack flex f-row">
@@ -176,12 +204,12 @@
       <h1 class="glow-heading">Featured</h1>
       <div class="featured-project">
         <p>
-          <strong>Containment</strong> won 'best game' in a friendly class
-          competition for SFSU's Multiplayer Game Development course. Among the
-          guest judges were several industry professionals & SF State's CS
-          department chair! The development team is <em>extremely</em> proud of
-          what we accomplished together within the scope of this class. Feast
-          your eyes on the horrors in the lab:
+          <strong>Containment</strong> won a class competition for SFSU's
+          Multiplayer Game Development course. Among the guest judges were
+          several industry professionals & SF State's CS department chair! Our
+          development team is <em>extremely</em> proud of what we accomplished
+          together within the scope of this class. Feast your eyes on the
+          <strong>horrors in the lab:</strong>
         </p>
 
         <iframe
@@ -196,24 +224,61 @@
     </section>
 
     <section id="contact">
-      <h1 class="glow-heading">My links</h1>
-      <div><img src="img/cartoon.PNG" alt="Cartoon-ized me" /></div>
+      <h1 class="glow-heading">Contact</h1>
+      <h2>Let's connect, & we'll build something great together.</h2>
 
-      <p>
-        If you've come this far, maybe you're willing to go a bit further! View
-        additional projects on my GitHub, or get in touch with me directly via
-        email/LinkedIn. Let's connect, & we'll build something great together.
-      </p>
+      <div class="flex f-row">
+        <span>
+          <a href="https://github.com/zrodr">
+            <i class="fab fa-github fa-1x icon"></i>
+          </a>
+          github.com/zrodr
+        </span>
+        <span>
+          <a href="https://www.linkedin.com/in/izaiah-rodriguez/">
+            <i class="fab fa-linkedin fa-1x icon"></i>
+          </a>
+          linkedin.com/in/izaiah-rodriguez
+        </span>
+        <span>
+          <a href="mailto:zrodr@protonmail.com">
+            <i class="fa fa-envelope fa-1x icon" aria-hidden="true"></i>
+          </a>
+          zrodr@protonmail.com
+        </span>
+      </div>
 
-      <a href="https://github.com/zrodr">
-        <i class="fab fa-github fa-3x icon"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/izaiah-rodriguez-6b688421a/">
-        <i class="fab fa-linkedin fa-3x icon"></i>
-      </a>
-      <a href="mailto:zrodr@protonmail.com">
-        <i class="fa fa-envelope fa-3x icon" aria-hidden="true"></i>
-      </a>
+      <form
+        id="email-form"
+        action="https://formspree.io/f/xlekgeev"
+        method="post"
+      >
+        <div class="form-group">
+          <label for="from">From:</label>
+          <input name="from" type="email" placeholder="Your email" />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input name="subject" type="text" placeholder="Subject line" />
+        </div>
+
+        <div class="form-group">
+          <label for="body">Message:</label>
+          <textarea
+            name="body"
+            id="email-body"
+            cols="30"
+            rows="7"
+            placeholder="Get in touch"
+          ></textarea>
+        </div>
+
+        <div>
+          <button class="btn-link" type="submit">Send</button>
+          <button class="btn-link" type="reset">Clear all</button>
+        </div>
+      </form>
     </section>
   </body>
 </html>

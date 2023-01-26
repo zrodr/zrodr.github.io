@@ -2,7 +2,7 @@
 
 :root {
   --color-primary: #2d2d2d;
-  --color-dark: #rgba(34, 34, 34, 0.9);
+  --color-dark: rgba(34, 34, 34, 0.9);
   --color-secondary: #14beb1;
   --color-accent: #3e54ab;
   --transparent-panel: rgba(12, 12, 12, 50%);
@@ -50,6 +50,10 @@ p {
   line-height: 1.4;
 }
 
+strong {
+  text-shadow: 0 0 7px var(--color-secondary);
+}
+
 .icon {
   padding: 1rem;
   color: white;
@@ -80,6 +84,7 @@ p {
   font-weight: 500;
   cursor: pointer;
   color: #fff;
+  background-color: inherit;
   border: 2px solid #fff;
   border-radius: 15px;
   padding: 0.75rem;
@@ -106,9 +111,9 @@ section .glow-heading {
  * Header 
  */
 header {
-  position: sticky;
+  /* position: sticky;
   top: 0;
-  left: 0;
+  left: 0; */
   width: 100%;
   padding: 1rem 1rem;
   background-color: var(--transparent-panel);
@@ -183,7 +188,7 @@ header img {
   }
 
   50% {
-    border-color: #000;
+    border-color: var(--transparent-panel);
   }
 
   100% {
@@ -240,11 +245,6 @@ header img {
   max-width: 45ch;
 }
 
-.about > p > strong,
-.featured-project > p > strong {
-  text-shadow: 0 0 7px var(--color-secondary);
-}
-
 /* 
  * Project showcase section 
  */
@@ -253,16 +253,14 @@ header img {
 }
 
 #project-carousel {
-  margin: auto;
-  margin-bottom: 6rem;
-  padding: 1rem 2rem;
-
+  margin: 1rem auto 6rem;
+  width: 90%;
+  justify-content: start;
   gap: 3rem;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scroll-padding: 25px;
-  justify-content: flex-start;
+  scroll-padding: 15px;
   scrollbar-width: none;
 }
 
@@ -272,20 +270,22 @@ header img {
 
 .project-card {
   position: relative;
-  min-width: 325px;
-  width: 325px;
+  max-width: 300px;
+  min-width: 300px;
   height: auto;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
   background-color: var(--transparent-panel);
-  border-radius: 10px;
+  border-radius: 15px;
   justify-content: flex-start;
   align-items: center;
 
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .project-card > :is(*:nth-child(even), *:last-child) {
   position: absolute;
+  z-index: 2;
   opacity: 0;
 }
 
@@ -297,22 +297,6 @@ header img {
 }
 .project-card a {
   top: 60%;
-}
-
-.project-card:hover > :is(*:nth-child(even), *:last-child) {
-  opacity: 1;
-  transition: opacity 0.75s;
-}
-
-.project-photo::after {
-  content: "";
-  height: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1.5px;
-  background: rgba(12, 12, 12, 50%);
 }
 
 .project-card .card-description {
@@ -330,7 +314,7 @@ header img {
 }
 
 .tech-stack li {
-  margin: 0.2rem;
+  margin: 0.1rem;
   padding: 0.3rem;
   border-radius: 10px;
   font-size: small;
@@ -344,6 +328,8 @@ header img {
 }
 
 .featured-project {
+  max-width: 85%;
+  margin: auto;
   padding: 2rem 1rem;
   display: grid;
   grid-template-columns: 0.75fr 1fr;
@@ -374,21 +360,19 @@ iframe {
   padding: 2rem 0 4rem 0;
 }
 
-#contact img {
-  margin: 0 0 2rem 0;
-  width: 164px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border: 3px solid black;
-  animation: border-glow 4s linear infinite;
-}
-
-#contact p {
+#contact h2 {
   margin: auto;
   margin-bottom: 2rem;
-  font-size: 1.1rem;
   text-align: center;
   max-width: 70ch;
+}
+
+#contact > div {
+  width: 80%;
+  min-width: 350px;
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 4rem;
 }
 
 #contact i[class~="fa-github"] {
@@ -401,6 +385,53 @@ iframe {
 
 #contact i[class~="fa-envelope"] {
   animation: purple-icon-glow 1s ease-in-out infinite alternate;
+}
+
+#email-form {
+  width: 365px;
+  margin: auto;
+  padding: 1rem 2rem;
+  background-color: var(--transparent-panel);
+  color: #fff;
+  text-align: start;
+
+  border-radius: 7px;
+  box-shadow: 0 0 8px #333;
+}
+
+.form-group {
+  font-size: 16px;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.form-group :is(input, select, textarea) {
+  font-size: inherit;
+  width: 100%;
+  color: inherit;
+  background-color: var(--color-primary);
+  border: 1px inset #555;
+  border-radius: 7px;
+  padding: 0.875rem;
+  padding-left: 0;
+}
+
+.form-group input,
+.form-group textarea {
+  padding-left: 0.375rem;
+  resize: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid var(--color-secondary);
+}
+
+#email-form .btn-link {
+  width: 125px;
+  margin: 0 0.5rem;
 }
 
 @keyframes green-icon-glow {
@@ -463,6 +494,41 @@ iframe {
     text-shadow: 0 3px 20px var(--color-secondary);
     cursor: default;
   }
+
+  .project-card:hover > :is(*:nth-child(even), *:last-child) {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  .project-card:hover::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(12, 12, 12, 80%);
+    border-radius: 10px;
+  }
+}
+
+/* handles 'hover' effect on mobile */
+@media (hover: none) {
+  .project-card.in-view > :is(*:nth-child(even), *:last-child) {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  .project-card.in-view::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(12, 12, 12, 80%);
+    border-radius: 10px;
+  }
 }
 
 /* tablet screens and split-window display */
@@ -478,7 +544,8 @@ iframe {
 
   #title-card > div {
     justify-self: center !important;
-    padding: 2rem 1rem;
+    padding: 0 0 1rem;
+    margin: 0 5% 1rem;
   }
 
   #title-card > div:first-child::after {
@@ -515,7 +582,12 @@ iframe {
   }
 
   .scroll-arrow.end {
-    transform: rotateY(180deg);
+    transform: rotateZ(180deg);
+  }
+
+  #contact > div {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -536,13 +608,6 @@ iframe {
 
   .title {
     font-size: 1.3rem;
-  }
-
-  #project-carousel > div:first-child {
-    margin-left: 0.2rem;
-  }
-  #project-carousel > div:last-child {
-    margin-right: 0.2rem;
   }
 
   .featured-project p {
